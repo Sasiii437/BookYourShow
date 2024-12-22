@@ -103,8 +103,15 @@
               <a class="nav-link" href="/movies">Movies</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{% url 'about_us'%}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
+            
             <li class="nav-item">
               <form method="Post" action="{% url 'logout' %}">
                 {% csrf_token %}
@@ -118,6 +125,15 @@
               </form>
             </li>
             {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about_us'%}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'login' %}">Login</a>
             </li>

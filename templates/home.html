@@ -1,4 +1,7 @@
-{% extends "users/basic.html" %} {% block content %}
+{% extends "users/basic.html" %}
+{% load static %}
+
+{% block content %}
 <style>
     body {
       font-family: "Arial", sans-serif;
@@ -130,7 +133,7 @@
         <a href="{% url 'theater_list' movie.id %}" class="text-decoration-none">
           <div class="card h-100">
             <img
-              src="{{ movie.image.url }}"
+              src="{% static 'images/' %}{{ movie.image }}"
               class="card-img-top"
               alt="{{ movie.name }}"
               height="300"

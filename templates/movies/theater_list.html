@@ -1,4 +1,6 @@
 {% extends "users/basic.html" %} 
+
+{% load static %}
 {% block content %}
 <style>
     /* Styling */
@@ -145,7 +147,7 @@
         <div class="theatre-info">
           <div>
             <strong>{{ theater.name }} Theater</strong>
-            <strong>COST:{{ theater.dynamic_price_display }} </strong>
+            <strong>COST: $ {{ theater.dynamic_price_display }} </strong>
             <div class="info-icons mt-2">
               <i class="fas fa-mobile-alt text-success"></i> M-Ticket
               <i class="fas fa-utensils text-warning ms-3"></i> Food & Beverage
